@@ -3,24 +3,24 @@
   Created by IntelliJ IDEA.
   User: admin
   Date: 2020-05-23
-  Time: ì˜¤ì „ 3:28
+  Time: ¿ÀÀü 3:28
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+         pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- ë·°í¬íŠ¸ -->
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <!-- ºäÆ÷Æ® -->
     <meta name="viewport" content="width=device-width" initial-scale="1">
-    <!-- ìŠ¤íƒ€ì¼ì‹œíŠ¸ ì°¸ì¡°  -->
+    <!-- ½ºÅ¸ÀÏ½ÃÆ® ÂüÁ¶  -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>ë ˆìŠ¤í† ëž‘ ì›¹ì‚¬ì´íŠ¸</title>
+    <title>·¹½ºÅä¶û À¥»çÀÌÆ®</title>
 </head>
 <body>
-<!-- ë„¤ë¹„ê²Œì´ì…˜  -->
+<!-- ³×ºñ°ÔÀÌ¼Ç  -->
 <nav class="navbar navbar-default">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed"
@@ -30,12 +30,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">ë ˆìŠ¤í† ëž‘ ì˜ˆì•½ ì‹œìŠ¤í…œ</a>
+        <a class="navbar-brand">·¹½ºÅä¶û ¿¹¾à ½Ã½ºÅÛ</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
 
         <ul class="nav navbar-nav navbar-right">
-                    <li><a href="signUpView.jsp">íšŒì›ê°€ìž…</a></li>
+                    <li><a href="signUpView.jsp">È¸¿ø°¡ÀÔ</a></li>
         </ul>
     </div>
 </nav>
@@ -44,21 +44,21 @@
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
             <form method="post" action="loginAction.jsp">
-                <h3 style="text-align: center;"> ë¡œê·¸ì¸í™”ë©´ </h3>
+                <h3 style="text-align: center;"> ·Î±×ÀÎÈ­¸é </h3>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ì•„ì´ë””" name="id" maxlength="20">
+                    <input type="text" class="form-control" placeholder="¾ÆÀÌµð" name="id" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="ë¹„ë°€ë²ˆí˜¸" name="password" maxlength="20">
+                    <input type="password" class="form-control" placeholder="ºñ¹Ð¹øÈ£" name="password" maxlength="20">
                 </div>
-                <input type="submit" class="btn btn-primary form-control" value="ë¡œê·¸ì¸">
+                <input type="submit" class="btn btn-primary form-control" value="·Î±×ÀÎ">
             </form>
         </div>
     </div>
 </div>
-<!-- ì• ë‹ˆë§¤ì´ì…˜ ë‹´ë‹¹ JQUERY -->
+<!-- ¾Ö´Ï¸ÅÀÌ¼Ç ´ã´ç JQUERY -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<!-- ë¶€íŠ¸ìŠ¤íŠ¸ëž© JS  -->
+<!-- ºÎÆ®½ºÆ®·¦ JS  -->
 <script src="js/bootstrap.js"></script>
 </body>
 </html>

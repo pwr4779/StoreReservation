@@ -2,25 +2,25 @@
   Created by IntelliJ IDEA.
   User: admin
   Date: 2020-05-23
-  Time: ì˜¤ì „ 3:46
+  Time: ¿ÀÀü 3:46
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page  language="java" contentType="text/html;charset=UTF-8" %>
+<%@ page  language="java" contentType="text/html;charset=euc-kr" %>
 <%@ page import = "java.sql.*" %>
 <%@ page import="DB.DBconnector" %>
 <%
-    request.setCharacterEncoding("UTF-8");%>
+    request.setCharacterEncoding("euc-kr");%>
 
 <html>
 <head>
-    <title>ë¡œê·¸ì¸í™•ì¸</title>
+    <title>·Î±×ÀÎÈ®ÀÎ</title>
 </head>
 <body>
 <%
     String id = request.getParameter("id");
     String pw = request.getParameter("password");
     Connection conn = DBconnector.getMySQLConnection();
-    String sql = "select count(*) count from íšŒì› where ì•„ì´ë”” = ?";
+    String sql = "select count(*) count from È¸¿ø where ¾ÆÀÌµğ = ?";
     PreparedStatement pstmt = conn.prepareStatement(sql);
     pstmt.setString(1, id);
     ResultSet rs = pstmt.executeQuery();
@@ -28,18 +28,19 @@
     int count = rs.getInt("count");
     if(count==0){%>
         <script>
-            alert( "ì¼ì¹˜í•˜ëŠ” íšŒì›ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤!!")
+            alert( "ÀÏÄ¡ÇÏ´Â È¸¿øÁ¤º¸°¡ ¾ø½À´Ï´Ù!!")
             location.href='loginView.jsp'
         </script>
     <%}else {
-        sql = "select * from íšŒì› where ì•„ì´ë”” = ?";
+        sql = "select * from È¸¿ø where ¾ÆÀÌµğ = ?";
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, id);
         rs = pstmt.executeQuery();
         String password;
         rs.next();
-        String Password = rs.getString("ë¹„ë°€ë²ˆí˜¸");
-        String masterNo = rs.getString("íšŒì›ë²ˆí˜¸");
+        String ID = rs.getString("¾ÆÀÌµğ");
+        String Password = rs.getString("ºñ¹Ğ¹øÈ£");
+        String masterNo = rs.getString("È¸¿ø¹øÈ£");
         DBconnector.close(rs);
         DBconnector.close(pstmt);
         DBconnector.close(conn);
@@ -47,19 +48,20 @@
         if(Password.equals(pw)){
             if(masterNo.equals("master0000")){%>
                          <script>
-                        alert( "ë¡œê·¸ì¸ì™„ë£Œ!!")
-                        location.href='storeManagementView.jsp'
+                        alert( "·Î±×ÀÎ¿Ï·á!!")
+                        location.href='StoreManagement/StoreManagementView.jsp'
                         </script>
             <%}else{
         %>
             <script>
-                    alert( "ë¡œê·¸ì¸ì™„ë£Œ!!")
-                    location.href='UserView.jsp'
-             </script>
+    alert( "·Î±×ÀÎ¿Ï·á!!")
+    location.href='UserView.jsp'
+</script>
             <%}
+                session.setAttribute("userID", ID);
         }else{%>
             <script>
-                    alert( "íšŒì›ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.")
+                    alert( "È¸¿øÁ¤º¸°¡ ¾ø½À´Ï´Ù.")
                     location.href='loginView.jsp'
                     </script >
         <%}

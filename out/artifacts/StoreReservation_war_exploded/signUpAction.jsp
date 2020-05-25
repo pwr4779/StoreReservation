@@ -2,10 +2,10 @@
   Created by IntelliJ IDEA.
   User: ParkWonRo
   Date: 2020-05-24
-  Time: ì˜¤ì „ 1:21
+  Time: ¿ÀÀü 1:21
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page  language="java" contentType="text/html;charset=UTF-8" %>
+<%@ page  language="java" contentType="text/html;charset=euc-kr" %>
 <%@ page import = "java.sql.*" %>
 <%@ page import="DB.DBconnector" %>
 <%@ page import="DB.User" %>
@@ -14,7 +14,7 @@
 
 <html>
 <head>
-    <title>íšŒì›ê°€ì…í™•ì¸</title>
+    <title>È¸¿ø°¡ÀÔÈ®ÀÎ</title>
 </head>
 <body>
 <%
@@ -32,7 +32,7 @@
             || user.getUserAddr() == null || user.getUserPhone() == null || user.getUserBirth()==null){
 %>
     <script>
-        alert( "í•„ìˆ˜ì •ë³´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.")
+        alert( "ÇÊ¼öÁ¤º¸¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.")
         location.href = 'signUpView.jsp'
     </script>
 <%
@@ -41,7 +41,7 @@
         if(result == -1){
 %>
     <script>
-        alert( "ì¡´ì¬í•˜ëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.")
+        alert( "Á¸ÀçÇÏ´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.")
         location.href = 'signUpView.jsp'
     </script>
 <%
@@ -49,7 +49,7 @@
             UserDAO.UserDetailDefaultInsert(user,conn);
 %>
     <script>
-        alert( "íšŒì›ê°€ì… ì™„ë£Œ!!")
+        alert( "È¸¿ø°¡ÀÔ ¿Ï·á!!")
         location.href = 'loginView.jsp'
     </script>
 <%
