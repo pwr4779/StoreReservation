@@ -18,10 +18,10 @@
 </head>
 <body>
 <%
-    String userName = DBconnector.NullCheck(request.getParameter("userName"));
+    String userName = DBconnector.NullCheck(new String(request.getParameter("userName").getBytes("8859_1"), "EUC-KR"));
     String userID = DBconnector.NullCheck(request.getParameter("userID"));
     String userPassword = DBconnector.NullCheck(request.getParameter("userPassword"));
-    String userAddr = DBconnector.NullCheck(request.getParameter("userAddr"));
+    String userAddr = DBconnector.NullCheck(new String(request.getParameter("userAddr").getBytes("8859_1"), "EUC-KR"));
     String userPhone = DBconnector.NullCheck(request.getParameter("userPhone"));
     String userBirth = DBconnector.NullCheck(request.getParameter("userBirth"));
     String userHobby = DBconnector.NullCheck(request.getParameter("userHobby"));
@@ -47,6 +47,7 @@
 <%
         }else{
             UserDAO.UserDetailDefaultInsert(user,conn);
+//            UserDAO.UserGradeHistoryInsert(user);
 %>
     <script>
         alert( "회원가입 완료!!")

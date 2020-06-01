@@ -32,8 +32,8 @@
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="StoreManagementView.jsp">매장관리</a></li>
-            <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
+            <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
+            <li><a href="MenuManageView.jsp">메뉴관리</a></li>
             <li><a href=".jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -46,29 +46,14 @@
     <div class="col-lg-4"></div>
     <div class="col-lg-4">
         <div class="jumbotron" style="padding-top: 20px;">
-            <form method="post" action="insertStoreInfoAction.jsp">
-                <h3 style="text-align: center;">매장 추가</h3>
+            <form method="post" action="insertMenuInfoAction.jsp">
+                <h3 style="text-align: center;">메뉴 추가</h3>
                 <small style="text-align: center;">*필수 항목을 모두 입력해주세요.</small>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*매장번호" name="storeNo" maxlength="20">
+                    <input type="text" class="form-control" placeholder="*메뉴이름" name="MenuName" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*주소" name="addr" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*전화번호" name="phone" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*테이블수" name="table" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*오픈시간" name="openTime" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*마감시간" name="closeTime" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*매장명" name="storeName" maxlength="50">
+                    <input type="text" class="form-control" placeholder="*가격" name="Amount" maxlength="20">
                 </div>
                 <input type="submit" class="btn btn-primary form-control" value="확인">
             </form>

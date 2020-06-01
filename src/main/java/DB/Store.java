@@ -5,6 +5,7 @@ import lombok.Data;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
@@ -16,6 +17,7 @@ public class Store {
     String StoreOpen;
     String StoreClose;
     String StoreName;
-    String AlterNo;
-    String AlterDate;
+    String HistoryNo;
+    String HistoryDate;
+
 }

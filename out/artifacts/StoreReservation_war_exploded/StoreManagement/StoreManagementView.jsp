@@ -59,9 +59,12 @@
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="main.jsp">매장관리</a></li>
-            <li><a href=".jsp">메뉴관리</a></li>
+            <li><a href="StoreManagementView.jsp">매장관리</a></li>
+            <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
             <li><a href=".jsp">회원관리</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
         </ul>
     </div>
 </nav>
@@ -93,8 +96,8 @@
                 <td><%=list.get(i).getStoreAddr()%></td>
                 <td><%=list.get(i).getStorePhone()%></td>
                 <td><%=list.get(i).getStoreTable()%></td>
-                <td><%=list.get(i).getStoreOpen().substring(0,2)+" : "+list.get(i).getStoreOpen().substring(2,4)%></td>
-                <td><%=list.get(i).getStoreClose().substring(0,2)+" : "+list.get(i).getStoreClose().substring(2,4)%></td>
+                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
+                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
                 <td><a href="StoreInfoView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>"><%=list.get(i).getStoreName()%></a></td>
             </tr>
             <%
@@ -119,7 +122,7 @@
         %>
 
         <%
-            //if logined userID라는 변수에 해당 아이디가 담기고 if not null
+
             if (session.getAttribute("userID") != null) {
         %>
         <a href="insertStoreInfo.jsp" class="btn btn-primary pull-right">추가</a>

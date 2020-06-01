@@ -7,24 +7,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c764ccf0-28bd-498a-a9e4-5450047a4c30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DB/StoreDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/MenuDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Menu/DeleteMenuAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Menu/MenuManageView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Menu/insertMenuInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Menu/insertMenuInfoAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/StoreManagement/BackUpStoreInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/StoreManagement/DeleteStoreInfoAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/StoreManagement/insertStoreInfoAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/User/OrderAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/User/OrderView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/User/UserHomeView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/alter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/UserView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/UserView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/StoreInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/StoreInfoView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/StoreManagementView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/StoreManagementView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/alterStoreInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/alterStoreInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/alterStoreInfoAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/alterStoreInfoAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/alterStoreToBeforeInfoAction.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/insertStoreInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/StoreManagement/insertStoreInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/UserView.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/loginAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/storeManagementView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/UserView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/UserView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/signUpAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/signUpAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/signUpView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StoreReservation_war_exploded/signUpView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/StoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/StoreDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/User/MenuChoiceView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/UserView.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/signUpAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signUpAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/signUpView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signUpView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/storeManagementView.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,127 +92,137 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="StoreReservation" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8561208">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1750">
-                  <caret line="113" column="21" lean-forward="true" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-                  <folding>
-                    <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DB/User.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/signUpAction.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="202">
-                  <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="276">
-                  <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="62" selection-start-line="62" selection-end-line="62" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/DB/Store.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="139" column="95" selection-start-line="139" selection-start-column="85" selection-end-line="139" selection-end-column="95" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="127" column="111" selection-start-line="127" selection-start-column="111" selection-end-line="127" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/User/OrderView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="99" column="104" lean-forward="true" selection-start-line="99" selection-start-column="85" selection-end-line="99" selection-end-column="104" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="39" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/User/MenuChoiceView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="72" column="6" lean-forward="true" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/User/OrderAction.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/OrderDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/MenuDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#369#375#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/Menu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -201,6 +232,9 @@
     <findStrings>
       <find>index</find>
       <find>UTF-8</find>
+      <find>insertBeforeInfo</find>
+      <find>insert</find>
+      <find>StoreNo = 0</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,7 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DBconnector.java" />
         <option value="$PROJECT_DIR$/web/Login.jsp" />
         <option value="$PROJECT_DIR$/src/DB/DBconnector.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/signUp.jsp" />
@@ -221,26 +254,46 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/DB/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/DBconnector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/UserDAO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/alterStoreInfo.jsp" />
         <option value="$PROJECT_DIR$/web/insertStoreInfo.jsp" />
         <option value="$PROJECT_DIR$/web/storeManagementView.jsp" />
         <option value="$PROJECT_DIR$/web/StoreInfoView.jsp" />
         <option value="$PROJECT_DIR$/web/StoreManagement/storeManagementView.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/Store.java" />
-        <option value="$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp" />
-        <option value="$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp" />
-        <option value="$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp" />
         <option value="$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp" />
-        <option value="$PROJECT_DIR$/web/loginAction.jsp" />
         <option value="$PROJECT_DIR$/web/loginView.jsp" />
-        <option value="$PROJECT_DIR$/web/signUpAction.jsp" />
-        <option value="$PROJECT_DIR$/web/signUpView.jsp" />
         <option value="$PROJECT_DIR$/web/UserView.jsp" />
-        <option value="$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp" />
         <option value="$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp" />
+        <option value="$PROJECT_DIR$/web/signUpView.jsp" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/insertStoreInfoAction.jsp" />
+        <option value="$PROJECT_DIR$/web/js/alter.js" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/BackUpStoreInfo.jsp" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/DropStoreInfoAction.jsp" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/DeleteStoreInfoAction.jsp" />
+        <option value="$PROJECT_DIR$/web/loginAction.jsp" />
+        <option value="$PROJECT_DIR$/web/signUpAction.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/UserDAO.java" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp" />
+        <option value="$PROJECT_DIR$/web/Menu/insertMenuInfoAction..jsp" />
+        <option value="$PROJECT_DIR$/web/Menu/insertMenuInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/Menu.java" />
+        <option value="$PROJECT_DIR$/web/Menu/deleteMenuAction.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/MenuDAO.java" />
+        <option value="$PROJECT_DIR$/web/Menu/insertMenuInfoAction.jsp" />
+        <option value="$PROJECT_DIR$/web/User/UserView.jsp" />
+        <option value="$PROJECT_DIR$/web/User/ChooseMenuView.jsp" />
+        <option value="$PROJECT_DIR$/web/Menu/MenuManageView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/Store.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/StoreDAO.java" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp" />
+        <option value="$PROJECT_DIR$/web/User/OrderView.jsp" />
+        <option value="$PROJECT_DIR$/web/User/orderAction.jsp" />
+        <option value="$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp" />
+        <option value="$PROJECT_DIR$/web/User/MenuChoiceView.jsp" />
+        <option value="$PROJECT_DIR$/web/User/OrderAction.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/OrderDAO.java" />
       </list>
     </option>
   </component>
@@ -258,11 +311,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="182" />
-    <option name="y" value="36" />
-    <option name="width" value="1648" />
-    <option name="height" value="1045" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="23" />
+    <option name="y" value="1" />
+    <option name="width" value="1937" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -272,8 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,7 +367,19 @@
               <item name="StoreReservation" type="b2602c69:ProjectViewProjectNode" />
               <item name="StoreReservation" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StoreReservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StoreReservation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="StoreManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StoreReservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StoreReservation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StoreReservation" type="b2602c69:ProjectViewProjectNode" />
@@ -328,13 +391,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;oracle" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590412727267" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590819558494" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/ojdbc8.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -347,6 +412,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ParkWonRo\Desktop\DBproject\StoreReservation\web\User" />
       <recent name="C:\Users\ParkWonRo\Desktop\DBproject\StoreReservation\web\StoreManagement" />
       <recent name="C:\Users\ParkWonRo\Desktop\DBproject\StoreReservation\web\Store" />
       <recent name="C:\Users\admin\Desktop\StoreReservation\web" />
@@ -366,7 +432,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.51" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -378,6 +444,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_StoreReservation" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1020" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -456,11 +524,14 @@
       <updated>1590172095928</updated>
       <workItem from="1590172103555" duration="13081000" />
       <workItem from="1590244923943" duration="58838000" />
+      <workItem from="1590412874912" duration="8613000" />
+      <workItem from="1590484929582" duration="7190000" />
+      <workItem from="1590744131141" duration="34392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71919000" />
+    <option name="totallyTimeSpent" value="122114000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,21 +543,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="19" y="1" width="1549" height="837" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.14697987" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49779087" visible="true" weight="0.1927468" />
       <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.15771812" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5022091" side_tool="true" weight="0.18120806" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3298969" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7073509" weight="0.4904271" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" weight="0.36671576" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7073509" weight="0.5545723" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" weight="0.35840708" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
@@ -494,10 +564,11 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32842416" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2926491" side_tool="true" weight="0.39344263" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4923717" weight="0.39322534" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4923717" weight="0.3480826" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3298969" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -509,30 +580,30 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.14697987" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49779087" visible="true" weight="0.1927468" />
       <window_info id="Structure" order="1" sideWeight="0.50073636" side_tool="true" weight="0.15771812" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5022091" side_tool="true" weight="0.18120806" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.3298969" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3298969" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7073509" visible="true" weight="0.17378497" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.4986577" weight="0.36671576" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.32918552" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32842416" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.2926491" side_tool="true" weight="0.39344263" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4923717" weight="0.394387" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7073509" weight="0.12979351" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" visible="true" weight="0.35840708" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32918552" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32842416" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2926491" side_tool="true" weight="0.39344263" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4923717" weight="0.3480826" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3298969" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -564,67 +635,67 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/UserDAO.java</url>
-          <line>29</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>87</line>
+          <line>136</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>85</line>
+          <line>134</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>89</line>
+          <line>138</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>88</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>90</line>
+          <line>139</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>91</line>
+          <line>140</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>92</line>
+          <line>141</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>93</line>
+          <line>142</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>94</line>
+          <line>143</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>95</line>
+          <line>144</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -642,27 +713,107 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp</url>
-          <line>62</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp</url>
-          <line>63</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>72</line>
+          <line>84</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp</url>
+          <line>109</line>
+          <properties />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
-          <line>73</line>
+          <line>15</line>
           <properties />
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/User/MenuChoiceView.jsp</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/User/MenuChoiceView.jsp</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/User/MenuChoiceView.jsp</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/User/OrderAction.jsp</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java</url>
+          <line>9</line>
+          <properties class="DB.StoreDAO" method="insertStore">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -747,104 +898,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        <state relative-caret-position="-2070">
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/signUpView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1012">
-          <caret line="21" column="63" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/UserView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-896">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/loginAction.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/loginView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
+        <state relative-caret-position="-350">
           <caret line="14" column="70" selection-start-line="14" selection-start-column="70" selection-end-line="14" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="113" column="21" lean-forward="true" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/signUpAction.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -858,37 +927,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/BackUpStoreInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/alter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="78" lean-forward="true" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreToBeforeInfoAction.jsp">
+    <entry file="file://$PROJECT_DIR$/web/Menu/DeleteMenuAction.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        <state relative-caret-position="368">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/DeleteStoreInfoAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Menu/insertMenuInfoAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="37" column="2" lean-forward="true" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Menu/insertMenuInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="52" column="94" selection-start-line="52" selection-start-column="86" selection-end-line="52" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/StoreInfoView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/insertStoreInfoAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/User/UserHomeView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-949">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/loginAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-761">
+          <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Menu/MenuManageView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/signUpView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/signUpAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfoAction.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="505">
+          <caret line="58" column="99" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/alterStoreInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="127" column="111" selection-start-line="127" selection-start-column="111" selection-end-line="127" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/insertStoreInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/MenuDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#369#375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/StoreManagement/StoreManagementView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="39" column="5" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/StoreDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="10" column="59" lean-forward="true" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/User/OrderView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="99" column="104" lean-forward="true" selection-start-line="99" selection-start-column="85" selection-end-line="99" selection-end-column="104" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/OrderDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/User/MenuChoiceView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="72" column="6" lean-forward="true" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/User/OrderAction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
         </state>
       </provider>
     </entry>

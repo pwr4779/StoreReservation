@@ -20,7 +20,7 @@
     String id = request.getParameter("id");
     String pw = request.getParameter("password");
     Connection conn = DBconnector.getMySQLConnection();
-    String sql = "select count(*) count from 회원 where 아이디 = ?";
+    String sql = "select count(*) count from USERS where ID = ?";
     PreparedStatement pstmt = conn.prepareStatement(sql);
     pstmt.setString(1, id);
     ResultSet rs = pstmt.executeQuery();
@@ -32,21 +32,21 @@
             location.href='loginView.jsp'
         </script>
     <%}else {
-        sql = "select * from 회원 where 아이디 = ?";
+        sql = "select * from USERS where ID = ?";
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, id);
         rs = pstmt.executeQuery();
         String password;
         rs.next();
-        String ID = rs.getString("아이디");
-        String Password = rs.getString("비밀번호");
-        String masterNo = rs.getString("회원번호");
+        String ID = rs.getString("ID");
+        String Password = rs.getString("PASSWORD");
+        String User_No = rs.getString("USER_NO");
         DBconnector.close(rs);
         DBconnector.close(pstmt);
         DBconnector.close(conn);
 
         if(Password.equals(pw)){
-            if(masterNo.equals("master0000")){%>
+            if(User_No.equals("master0000")){%>
                          <script>
                         alert( "로그인완료!!")
                         location.href='StoreManagement/StoreManagementView.jsp'
@@ -55,7 +55,7 @@
         %>
             <script>
     alert( "로그인완료!!")
-    location.href='UserView.jsp'
+    location.href='User/UserHomeView.jsp'
 </script>
             <%}
                 session.setAttribute("userID", ID);

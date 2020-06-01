@@ -59,9 +59,10 @@
         String StoreName = new String(request.getParameter("StoreName").getBytes("8859_1"), "EUC-KR");
         String StoreAddr = new String(request.getParameter("StoreAddr").getBytes("8859_1"), "EUC-KR");
         String StorePhone = new String(request.getParameter("StorePhone").getBytes("8859_1"), "EUC-KR");
-
+    String StoreOpen = new String(request.getParameter("StoreOpen").getBytes("8859_1"), "EUC-KR");
+    String StoreClose = new String(request.getParameter("StoreClose").getBytes("8859_1"), "EUC-KR");
         StoreDAO.insertBeforeInfo(store);
-        int result = StoreDAO.update(Integer.toString(StoreNo),StoreName,StoreAddr, StorePhone, Integer.parseInt(request.getParameter("StoreTable")), request.getParameter("StoreOpen"), request.getParameter("StoreClose"));
+        int result = StoreDAO.update(Integer.toString(StoreNo),StoreName,StoreAddr, StorePhone, Integer.parseInt(request.getParameter("StoreTable")), StoreOpen, StoreClose);
         if (result == -1) {
 %>
 <script>

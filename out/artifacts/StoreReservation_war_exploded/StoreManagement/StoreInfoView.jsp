@@ -65,6 +65,9 @@
             <li><a href="bbs.jsp">메뉴관리</a></li>
             <li><a href="bbs.jsp">회원관리</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
+        </ul>
     </div>
 </nav>
 <!-- 매장정보 -->
@@ -75,7 +78,7 @@
             <thead>
             <tr>
                 <th colspan="3"
-                    style="background-color: #eeeeee; text-align: center;">글 보기 </th>
+                    style="background-color: #eeeeee; text-align: center;">매장 정보 </th>
             </tr>
             </thead>
             <tbody>
@@ -101,18 +104,18 @@
             </tr>
             <tr>
                 <td>오픈시간</td>
-                <td colspan="2"><%= store.getStoreOpen().substring(0, 2) + " : "+  store.getStoreOpen().substring(2, 4) %></td>
+                <td colspan="2"><%= store.getStoreOpen().substring(11, 13) + " : "+  store.getStoreOpen().substring(14, 16) %></td>
             </tr>
             <tr>
                 <td>마감시간</td>
-                <td colspan="2"><%= store.getStoreClose().substring(0, 2) + " : "+  store.getStoreClose().substring(2, 4)%></td>
+                <td colspan="2"><%= store.getStoreClose().substring(11, 13) + " : "+  store.getStoreClose().substring(14, 16)%></td>
             </tr>
 
             </tbody>
         </table>
         <a href = "StoreManagementView.jsp" class="btn btn-primary">목록</a>
         <a href="alterStoreInfo.jsp?StoreNo=<%= StoreNo %>" class="btn btn-primary">수정</a>
-        <a href="Delete.jsp?StoreNo=<%= StoreNo %>" class="btn btn-primary">삭제</a>
+        <a href="DeleteStoreInfoAction.jsp?StoreNo=<%= StoreNo %>" class="btn btn-primary">삭제</a>
     </div>
 </div>
 

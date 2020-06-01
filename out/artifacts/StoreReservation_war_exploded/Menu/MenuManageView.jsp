@@ -1,10 +1,8 @@
 <%@ page import="java.sql.Connection" %>
-<%@ page import="DB.DBconnector" %>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="DB.StoreDAO" %>
-<%@ page import="DB.Store" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="DB.*" %><%--
   Created by IntelliJ IDEA.
   User: ParkWonRo
   Date: 2020-05-24
@@ -29,7 +27,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <!-- 스타일시트 참조  -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>레스토랑 웹사이트</title>
+    <title>메뉴관리</title>
 </head>
 <body>
 
@@ -55,12 +53,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="StoreManagementView.jsp">매장관리</a></li>
-            <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
+            <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
+            <li><a href="MenuManageView.jsp">메뉴관리</a></li>
             <li><a href=".jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -68,37 +66,33 @@
         </ul>
     </div>
 </nav>
-<!-- 매장정보 -->
+<!-- 메뉴정보 -->
 <div class="container">
+
     <div class="row">
         <table class="table table-striped"
                style="text-align: center; border: 1px solid #dddddd">
             <thead>
             <tr>
-                <th style="background-color: #eeeeee; text-align: center;">매장번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">주소</th>
-                <th style="background-color: #eeeeee; text-align: center;">전화번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">테이블수</th>
-                <th style="background-color: #eeeeee; text-align: center;">오픈시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">마감시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">매장명</th>
+                <th style="background-color: #eeeeee; text-align: center;">메뉴번호</th>
+                <th style="background-color: #eeeeee; text-align: center;">메뉴명</th>
+                <th style="background-color: #eeeeee; text-align: center;">금액</th>
+                <th style="background-color: #eeeeee; text-align: center;"></th>
             </tr>
             </thead>
             <tbody>
             <%
-                StoreDAO storeDAO = new StoreDAO();
+
                 Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<Store> list = storeDAO.getList(pageNumber, conn);
+                ArrayList<Menu> list = MenuDAO.getList(pageNumber, conn);
                 for (int i = 0; i < list.size(); i++) {
+                    String MenuNo = list.get(i).getMenuNo();
             %>
             <tr>
-                <td><%=list.get(i).getStoreNo()%></td>
-                <td><%=list.get(i).getStoreAddr()%></td>
-                <td><%=list.get(i).getStorePhone()%></td>
-                <td><%=list.get(i).getStoreTable()%></td>
-                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
-                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
-                <td><a href="StoreInfoView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>"><%=list.get(i).getStoreName()%></a></td>
+                <td><%=list.get(i).getMenuNo()%></td>
+                <td><%=list.get(i).getMenuName()%></td>
+                <td><%=list.get(i).getAmount()%></td>
+                <td><a href="DeleteMenuAction.jsp?MenuNo=<%=MenuNo%>" class="btn btn-primary">삭제</a></td>
             </tr>
             <%
                 }
@@ -107,8 +101,8 @@
         </table>
         <!-- 페이지 넘기기 -->
         <%
-        if (pageNumber != 1) {
-    %>
+            if (pageNumber != 1) {
+        %>
         <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber - 1%>"
            class="btn btn-success btn-arrow-left">이전</a>
         <%
@@ -118,14 +112,14 @@
         <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber + 1%>"
            class="btn btn-success btn-arrow-left">다음</a>
         <%
-//            }
+            //            }
         %>
 
         <%
-
+            //if logined userID라는 변수에 해당 아이디가 담기고 if not null
             if (session.getAttribute("userID") != null) {
         %>
-        <a href="insertStoreInfo.jsp" class="btn btn-primary pull-right">추가</a>
+        <a href="insertMenuInfo.jsp" class="btn btn-primary pull-right">추가</a>
         <%
         } else {
         %>
@@ -133,7 +127,7 @@
         <%
             }
         %>
-    </div>
+        </div>
 </div>
 
 

@@ -53,7 +53,7 @@
                     <input type="text" class="form-control" placeholder="*아이디" name="userID" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="*비밀번호(YYYYMMDD ex)19960101)" name="userPassword" maxlength="20">
+                    <input type="password" class="form-control" placeholder="*비밀번호" name="userPassword" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="*주소" name="userAddr" maxlength="20">
@@ -62,7 +62,7 @@
                     <input type="text" class="form-control" placeholder="*휴대폰번호" name="userPhone" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*생일" name="userBirth" maxlength="20">
+                    <input type="text" class="form-control" placeholder="*생일(YYYYMMDD ex)19960101)" name="userBirth" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="취미" name="userHobby" maxlength="50">
