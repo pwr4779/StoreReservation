@@ -64,6 +64,7 @@
         <ul class="nav navbar-nav">
             <li><a href="UserHomeView.jsp">내정보</a></li>
             <li><a href="OrderView.jsp">주문하기</a></li>
+            <li><a href="OrderStateView.jsp">주문현황</a></li>
             <li><a href=".jsp">예약하기</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -73,7 +74,7 @@
 </nav>
 <!-- 테이블선택-->
 <div class="container">
-    <form method="post" action="OrderAction.jsp?StoreNo<%=StoreNo%>&userID=<%=userID%>">
+    <form method="post" action="OrderAction.jsp?StoreNo=<%=StoreNo%>&userID=<%=userID%>">
     <div class="col-lg-2">
     <h2>테이블선택</h2>
         <select class="form-control" name="tableNum">

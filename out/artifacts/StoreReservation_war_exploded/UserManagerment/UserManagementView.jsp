@@ -62,7 +62,7 @@
             <li><a href="StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
             <li><a href="../Payment/PaymentView.jsp">결제처리</a></li>
-            <li><a href=".jsp">회원관리</a></li>
+            <li><a href="UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -76,13 +76,14 @@
                style="text-align: center; border: 1px solid #dddddd">
             <thead>
             <tr>
-                <th style="background-color: #eeeeee; text-align: center;">매장번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">주소</th>
-                <th style="background-color: #eeeeee; text-align: center;">전화번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">테이블수</th>
-                <th style="background-color: #eeeeee; text-align: center;">오픈시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">마감시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">매장명</th>
+                <th style="background-color: #eeeeee; text-align: center;">아이디</th>
+                <th style="background-color: #eeeeee; text-align: center;">현재포인트</th>
+                <th style="background-color: #eeeeee; text-align: center;">주문횟수</th>
+                <th style="background-color: #eeeeee; text-align: center;">등급</th>
+                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(10%)</th>
+                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(7%)</th>
+                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(3%)</th>
+                <th style="background-color: #eeeeee; text-align: center;">연간누적포인트</th>
             </tr>
             </thead>
             <tbody>
@@ -108,8 +109,8 @@
         </table>
         <!-- 페이지 넘기기 -->
         <%
-        if (pageNumber != 1) {
-    %>
+            if (pageNumber != 1) {
+        %>
         <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber - 1%>"
            class="btn btn-success btn-arrow-left">이전</a>
         <%
@@ -119,7 +120,7 @@
         <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber + 1%>"
            class="btn btn-success btn-arrow-left">다음</a>
         <%
-//            }
+            //            }
         %>
 
         <%

@@ -27,7 +27,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <!-- 스타일시트 참조  -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>주문하기</title>
+    <title>주문현황확인</title>
 </head>
 <body>
 
@@ -67,62 +67,56 @@
         </ul>
     </div>
 </nav>
-<!-- 매장선택 -->
+<!-- 주문현황 -->
+<%
+    ArrayList<OrderState> list = OrderDAO.OrderState(userID);
+%>
 <div class="container">
-    <div class="row">
-        <h3 style="text-align: center;">매장을 선택해주세요.</h3>
-        <table class="table table-striped"
-               style="text-align: center; border: 1px solid #dddddd">
-            <thead>
-            <tr>
-                <th style="background-color: #eeeeee; text-align: center;">매장번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">주소</th>
-                <th style="background-color: #eeeeee; text-align: center;">전화번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">테이블수</th>
-                <th style="background-color: #eeeeee; text-align: center;">오픈시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">마감시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">매장명(선택)</th>
-            </tr>
-            </thead>
-            <tbody>
-            <%
-                StoreDAO storeDAO = new StoreDAO();
-                Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<Store> list = storeDAO.getList(pageNumber, conn);
-                for (int i = 0; i < list.size(); i++) {
-            %>
-            <tr>
-                <td><%=list.get(i).getStoreNo()%></td>
-                <td><%=list.get(i).getStoreAddr()%></td>
-                <td><%=list.get(i).getStorePhone()%></td>
-                <td><%=list.get(i).getStoreTable()%></td>
-                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
-                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
-                <td><a href="MenuChoiceView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>&userID=<%=userID%>"><%=list.get(i).getStoreName()%></a></td>
-            </tr>
-            <%
-                }
-            %>
-            </tbody>
-        </table>
-        <!-- 페이지 넘기기 -->
-        <%
-            if (pageNumber != 1) {
-        %>
-        <a href="OrderView.jsp?pageNumber=<%=pageNumber - 1%>"
-           class="btn btn-success btn-arrow-left">이전</a>
-        <%
-            }
-//            if (bbsDAO.nextPage(pageNumber)) {
-        %>
-        <a href="OrderView.jsp?pageNumber=<%=pageNumber + 1%>"
-           class="btn btn-success btn-arrow-left">다음</a>
-        <%
-            //            }
-        %>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="jumbotron" style="padding-top: 20px;">
+                <h3 style="text-align: center;">주문현황</h3>
+
+                    <h4 style="text-align: center;">매장명: <%=list.get(0).getStoreName()%></h4>
+
+
+                    <h4 style="text-align: center;">테이블번호: <%=list.get(0).getTableNo()%> </h4>
+
+
+                    <h4 style="text-align: center;">이용인원수: <%=list.get(0).getNumOfUsers()%> </h4>
+
+
+                    <h4 style="text-align: center;">총 가격: <%=list.get(0).getTOTAL_ORDER_AMOUNT()%> </h4>
+
+                <table class="table table-striped"
+                       style="text-align: center; border: 1px solid #dddddd">
+                    <thead>
+                    <tr>
+                        <th style="background-color: #eeeeee; text-align: center;">메뉴이름</th>
+                        <th style="background-color: #eeeeee; text-align: center;">수량</th>
+                        <th style="background-color: #eeeeee; text-align: center;">메뉴가격</th>
+                        <th style="background-color: #eeeeee; text-align: center;">메뉴가격*수량</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+
+                        for (int i = 0; i < list.size(); i++) {
+                    %>
+                    <tr>
+                        <td><%=list.get(i).getMenuName()%></td>
+                        <td><%=list.get(i).getNumOfOrders()%></td>
+                        <td><%=list.get(i).getAmount()%></td>
+                        <td><%=list.get(i).getOrderAmount()%></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                    </tbody>
+                </table>
+        </div>
     </div>
 </div>
-
 
 <!-- 애니매이션 담당 JQUERY -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

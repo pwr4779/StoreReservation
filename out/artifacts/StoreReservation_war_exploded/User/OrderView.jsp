@@ -57,8 +57,9 @@
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href=".jsp">내정보</a></li>
+            <li><a href="UserHomeView.jsp">내정보</a></li>
             <li><a href="OrderView.jsp">주문하기</a></li>
+            <li><a href="OrderStateView.jsp">주문현황</a></li>
             <li><a href=".jsp">예약하기</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -118,19 +119,6 @@
            class="btn btn-success btn-arrow-left">다음</a>
         <%
             //            }
-        %>
-
-        <%
-            //if logined userID라는 변수에 해당 아이디가 담기고 if not null
-            if (session.getAttribute("userID") != null) {
-        %>
-        <a href="insertStoreInfo.jsp" class="btn btn-primary pull-right">추가</a>
-        <%
-        } else {
-        %>
-        <button class="btn btn-primary pull-right" onclick="if(confirm('로그인 하세요'))location.href='loginView.jsp';" type="button">추가</button>
-        <%
-            }
         %>
     </div>
 </div>

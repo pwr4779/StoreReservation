@@ -1,10 +1,8 @@
 <%@ page import="java.sql.Connection" %>
-<%@ page import="DB.DBconnector" %>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="DB.StoreDAO" %>
-<%@ page import="DB.Store" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="DB.*" %><%--
   Created by IntelliJ IDEA.
   User: ParkWonRo
   Date: 2020-05-24
@@ -38,11 +36,6 @@
     if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    int pageNumber = 1; //기본 페이지 넘버
-    //페이지넘버값이 있을때
-    if (request.getParameter("pageNumber") != null) {
-        pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-    }
 %>
 
 <!-- 네비게이션  -->
@@ -59,9 +52,9 @@
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="StoreManagementView.jsp">매장관리</a></li>
+            <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
-            <li><a href="../Payment/PaymentView.jsp">결제처리</a></li>
+            <li><a href="../PaymentView.jsp">결제처리</a></li>
             <li><a href=".jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -69,7 +62,7 @@
         </ul>
     </div>
 </nav>
-<!-- 매장정보 -->
+<!-- 주문현황 -->
 <div class="container">
     <div class="row">
         <table class="table table-striped"
@@ -77,63 +70,38 @@
             <thead>
             <tr>
                 <th style="background-color: #eeeeee; text-align: center;">매장번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">주소</th>
-                <th style="background-color: #eeeeee; text-align: center;">전화번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">테이블수</th>
-                <th style="background-color: #eeeeee; text-align: center;">오픈시간</th>
-                <th style="background-color: #eeeeee; text-align: center;">마감시간</th>
                 <th style="background-color: #eeeeee; text-align: center;">매장명</th>
+                <th style="background-color: #eeeeee; text-align: center;">주문번호</th>
+                <th style="background-color: #eeeeee; text-align: center;">테이블번호</th>
+                <th style="background-color: #eeeeee; text-align: center;">이용자수</th>
+                <th style="background-color: #eeeeee; text-align: center;">총가격</th>
+                <th style="background-color: #eeeeee; text-align: center;">결제처리</th>
             </tr>
             </thead>
             <tbody>
             <%
                 StoreDAO storeDAO = new StoreDAO();
                 Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<Store> list = storeDAO.getList(pageNumber, conn);
+                ArrayList<OrderState> list = OrderDAO.OrderStateALLList();
                 for (int i = 0; i < list.size(); i++) {
+                    String orderNo = list.get(i).getOrderNo();
             %>
+            <form method="post" action="BackUpStoreInfo.jsp?OrderNo=<%=orderNo%>&select=<%=i%>">
             <tr>
                 <td><%=list.get(i).getStoreNo()%></td>
-                <td><%=list.get(i).getStoreAddr()%></td>
-                <td><%=list.get(i).getStorePhone()%></td>
-                <td><%=list.get(i).getStoreTable()%></td>
-                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
-                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
-                <td><a href="StoreInfoView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>"><%=list.get(i).getStoreName()%></a></td>
+                <td><%=list.get(i).getStoreName()%></td>
+                <td><%=list.get(i).getOrderNo()%></td>
+                <td><%=list.get(i).getTableNo()%></td>
+                <td><%=list.get(i).getNumOfUsers()%></td>
+                <td><%=list.get(i).getTOTAL_ORDER_AMOUNT()%></td>
+                <td><input type="submit" class="btn btn-primary form-control" value="결제하기"></td>
             </tr>
+            </form>
             <%
                 }
             %>
             </tbody>
         </table>
-        <!-- 페이지 넘기기 -->
-        <%
-        if (pageNumber != 1) {
-    %>
-        <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber - 1%>"
-           class="btn btn-success btn-arrow-left">이전</a>
-        <%
-            }
-//            if (bbsDAO.nextPage(pageNumber)) {
-        %>
-        <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber + 1%>"
-           class="btn btn-success btn-arrow-left">다음</a>
-        <%
-//            }
-        %>
-
-        <%
-
-            if (session.getAttribute("userID") != null) {
-        %>
-        <a href="insertStoreInfo.jsp" class="btn btn-primary pull-right">추가</a>
-        <%
-        } else {
-        %>
-        <button class="btn btn-primary pull-right" onclick="if(confirm('로그인 하세요'))location.href='loginView.jsp';" type="button">추가</button>
-        <%
-            }
-        %>
     </div>
 </div>
 

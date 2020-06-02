@@ -34,6 +34,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="UserHomeView.jsp">내정보</a></li>
                 <li><a href="OrderView.jsp">주문하기</a></li>
+                <li><a href="OrderStateView.jsp">주문현황</a></li>
                 <li><a href=".jsp">예약하기</a></li>
             </ul>
         <ul class="nav navbar-nav navbar-right">

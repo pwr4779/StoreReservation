@@ -22,22 +22,53 @@
         StoreNo = Integer.parseInt(request.getParameter("StoreNo"));
     }
 
-    int UserNo = 0;
-    if (request.getParameter("UserNo") != null) {
-        UserNo = Integer.parseInt(request.getParameter("userID"));
+    String UserNo = null;
+    if (request.getParameter("userID") != null) {
+        UserNo = request.getParameter("userID");
     }
     Connection conn = DBconnector.getMySQLConnection();
     ArrayList<Menu> list = MenuDAO.getList(0, conn);
     String OrderNo = StoreNo+""+UserNo;
+    int flag = 0;
     for (int i = 0; i < list.size(); i++) {
         String MenuNo = list.get(i).getMenuNo();
         int MenuAmount = list.get(i).getAmount();
-        if (request.getParameter("count") != null && Integer.parseInt(request.getParameter("count" + i)) > 0) {
+        if ( Integer.parseInt(request.getParameter("count" + i)) > 0) {
+            if(flag == 0){
+                int r = OrderDAO.InsertOrder(OrderNo, StoreNo+ "", UserNo + "", 0, Integer.parseInt(request.getParameter("tableNum")), Integer.parseInt(request.getParameter("UserCount")));
+                if(r == -1){
+                    %>
+                    <script>
+                        alert( "이미 주문이 들어있습니다!!")
+                location.href = 'OrderView.jsp'
+                        </script>
+                        <%
+               flag++;
+                }
+            }
             OrderDAO.InsertOrderMenu(MenuNo, OrderNo, Integer.parseInt(request.getParameter("count" + i)), MenuAmount);
         }
     }
     int totalamount = OrderDAO.totalAmount(OrderNo);
-    OrderDAO.InsertOrder(OrderNo,StoreNo+"",UserNo+"",totalamount,Integer.parseInt(request.getParameter("tableNum")),Integer.parseInt(request.getParameter("UserCount")));
+    int result = -1;
+    if(totalamount >0) {
+        result = OrderDAO.UpdateTotalAmount(OrderNo,  totalamount);
+    }
+        if(result != -1){
+%>
+<script>
+    alert( "주문 성공!!")
+    location.href = 'OrderView.jsp'
+</script>
+<%
+    }else{
+%>
+<script>
+    alert( "주문 실패!!")
+    location.href = 'OrderView.jsp'
+</script>
+<%
+    }
 %>
 
 </body>
