@@ -1,10 +1,8 @@
 <%@ page import="java.sql.Connection" %>
-<%@ page import="DB.DBconnector" %>
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="DB.StoreDAO" %>
-<%@ page import="DB.Store" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="DB.*" %><%--
   Created by IntelliJ IDEA.
   User: ParkWonRo
   Date: 2020-05-24
@@ -59,7 +57,7 @@
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="StoreManagementView.jsp">매장관리</a></li>
+            <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
             <li><a href="../Payment/PaymentView.jsp">결제처리</a></li>
             <li><a href="UserManagementView.jsp">회원관리</a></li>
@@ -90,17 +88,18 @@
             <%
                 StoreDAO storeDAO = new StoreDAO();
                 Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<Store> list = storeDAO.getList(pageNumber, conn);
-                for (int i = 0; i < list.size(); i++) {
+                ArrayList<UserDetail>  userDetailList = UserDAO.GetUserDetailList(pageNumber);
+                for (int i = 0; i < userDetailList.size(); i++) {
             %>
             <tr>
-                <td><%=list.get(i).getStoreNo()%></td>
-                <td><%=list.get(i).getStoreAddr()%></td>
-                <td><%=list.get(i).getStorePhone()%></td>
-                <td><%=list.get(i).getStoreTable()%></td>
-                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
-                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
-                <td><a href="StoreInfoView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>"><%=list.get(i).getStoreName()%></a></td>
+                <td><a href="UserGradeHistory.jsp?UserNo=<%=userDetailList.get(i).getUserNo()%>"><%=userDetailList.get(i).getUserNo()%></a></td>
+                <td><%=userDetailList.get(i).getACPoint()%></td>
+                <td><%=userDetailList.get(i).getNumOfOrders()%></td>
+                <td><%=userDetailList.get(i).getGrade()%></td>
+                <td><%=userDetailList.get(i).getCoupon10()%></td>
+                <td><%=userDetailList.get(i).getCoupon7()%></td>
+                <td><%=userDetailList.get(i).getCoupon3()%></td>
+                <td><%=userDetailList.get(i).getYearACPoint()%></td>
             </tr>
             <%
                 }
@@ -123,18 +122,6 @@
             //            }
         %>
 
-        <%
-
-            if (session.getAttribute("userID") != null) {
-        %>
-        <a href="insertStoreInfo.jsp" class="btn btn-primary pull-right">추가</a>
-        <%
-        } else {
-        %>
-        <button class="btn btn-primary pull-right" onclick="if(confirm('로그인 하세요'))location.href='loginView.jsp';" type="button">추가</button>
-        <%
-            }
-        %>
     </div>
 </div>
 

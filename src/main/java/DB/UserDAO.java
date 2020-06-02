@@ -2,6 +2,8 @@ package DB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class UserDAO {
     public static int SignUp(User user, Connection conn) {
@@ -45,6 +47,25 @@ public class UserDAO {
             e.printStackTrace();
         }
         return -1; // DB 오류
+    }
+
+    public static  ArrayList<UserDetail>  GetUserDetailList(int pageNumber) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "SELECT * FROM USER_DETAIL WHERE ? <= ROWNUM AND ROWNUM < ? ORDER BY USER_NO";
+        ArrayList<UserDetail> list = new ArrayList<UserDetail>();
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setInt(1, pageNumber);
+            pstmt.setInt(2, (pageNumber+10));
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                UserDetail userDetail = new UserDetail(rs.getString("USER_NO"),rs.getInt("AC_POINT"),rs.getInt("NUM_OF_ORDERS"),rs.getString("GRADE"),rs.getInt("COUPON_COUNT_10p"),rs.getInt("COUPON_COUNT_7p"),rs.getInt("COUPON_COUNT_3p"),rs.getInt("YEAR_AC_POINT"));
+                list.add(userDetail);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
 //    public static int UserGradeHistoryInsert(User user) {

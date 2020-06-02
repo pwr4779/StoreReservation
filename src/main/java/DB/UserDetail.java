@@ -10,5 +10,8 @@ public class UserDetail {
     int ACPoint;
     int NumOfOrders;
     String Grade;
-    
+    int Coupon10;
+    int Coupon7;
+    int Coupon3;
+    int YearACPoint;
 }
