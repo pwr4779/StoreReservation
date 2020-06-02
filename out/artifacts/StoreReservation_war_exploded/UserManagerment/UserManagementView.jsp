@@ -82,6 +82,7 @@
                 <th style="background-color: #eeeeee; text-align: center;">쿠폰수(7%)</th>
                 <th style="background-color: #eeeeee; text-align: center;">쿠폰수(3%)</th>
                 <th style="background-color: #eeeeee; text-align: center;">연간누적포인트</th>
+                <th style="background-color: #eeeeee; text-align: center;">등급이력확인</th>
             </tr>
             </thead>
             <tbody>
@@ -92,7 +93,7 @@
                 for (int i = 0; i < userDetailList.size(); i++) {
             %>
             <tr>
-                <td><a href="UserGradeHistory.jsp?UserNo=<%=userDetailList.get(i).getUserNo()%>"><%=userDetailList.get(i).getUserNo()%></a></td>
+                <td><%=userDetailList.get(i).getUserNo()%></td>
                 <td><%=userDetailList.get(i).getACPoint()%></td>
                 <td><%=userDetailList.get(i).getNumOfOrders()%></td>
                 <td><%=userDetailList.get(i).getGrade()%></td>
@@ -100,6 +101,7 @@
                 <td><%=userDetailList.get(i).getCoupon7()%></td>
                 <td><%=userDetailList.get(i).getCoupon3()%></td>
                 <td><%=userDetailList.get(i).getYearACPoint()%></td>
+                <td><a href="UserGradeHistoryView.jsp?UserNo=<%=userDetailList.get(i).getUserNo()%>">확인</a></td>
             </tr>
             <%
                 }

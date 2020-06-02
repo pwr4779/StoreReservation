@@ -41,6 +41,10 @@
     if (request.getParameter("pageNumber") != null) {
         pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
     }
+    String UserNo = null;
+    if (request.getParameter("UserNo") != null) {
+        UserNo = request.getParameter("UserNo");
+    }
 %>
 
 <!-- 네비게이션  -->
@@ -53,7 +57,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -75,33 +79,22 @@
             <thead>
             <tr>
                 <th style="background-color: #eeeeee; text-align: center;">아이디</th>
-                <th style="background-color: #eeeeee; text-align: center;">현재포인트</th>
-                <th style="background-color: #eeeeee; text-align: center;">주문횟수</th>
+                <th style="background-color: #eeeeee; text-align: center;">부여날짜</th>
                 <th style="background-color: #eeeeee; text-align: center;">등급</th>
-                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(10%)</th>
-                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(7%)</th>
-                <th style="background-color: #eeeeee; text-align: center;">쿠폰수(3%)</th>
-                <th style="background-color: #eeeeee; text-align: center;">연간누적포인트</th>
-                <th style="background-color: #eeeeee; text-align: center;">등급이력확인</th>
+                <th style="background-color: #eeeeee; text-align: center;">만료날짜</th>
+
             </tr>
             </thead>
             <tbody>
             <%
-                StoreDAO storeDAO = new StoreDAO();
-                Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<UserDetail>  userDetailList = UserDAO.GetUserDetailList(pageNumber);
-                for (int i = 0; i < userDetailList.size(); i++) {
+                ArrayList<GradeHistory>  getGradeHistoryList = UserDAO.GetGradeHistoryList(pageNumber, UserNo);
+                for (int i = 0; i < getGradeHistoryList.size(); i++) {
             %>
             <tr>
-                <td><%=userDetailList.get(i).getUserNo()%></td>
-                <td><%=userDetailList.get(i).getACPoint()%></td>
-                <td><%=userDetailList.get(i).getNumOfOrders()%></td>
-                <td><%=userDetailList.get(i).getGrade()%></td>
-                <td><%=userDetailList.get(i).getCoupon10()%></td>
-                <td><%=userDetailList.get(i).getCoupon7()%></td>
-                <td><%=userDetailList.get(i).getCoupon3()%></td>
-                <td><%=userDetailList.get(i).getYearACPoint()%></td>
-                <td><a href="UserGradeHistoryView.jsp?UserNo=<%=userDetailList.get(i).getUserNo()%>">확인</a></td>
+                <td><%=getGradeHistoryList.get(i).getUserNo()%></td>
+                <td><%=getGradeHistoryList.get(i).getGrantDate()%></td>
+                <td><%=getGradeHistoryList.get(i).getGrade()%></td>
+                <td><%=getGradeHistoryList.get(i).getExpireDate()%></td>
             </tr>
             <%
                 }
@@ -112,13 +105,13 @@
         <%
             if (pageNumber != 1) {
         %>
-        <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber - 1%>"
+        <a href="UserGradeHistoryView.jsp?pageNumber=<%=pageNumber - 1%>"
            class="btn btn-success btn-arrow-left">이전</a>
         <%
             }
 //            if (bbsDAO.nextPage(pageNumber)) {
         %>
-        <a href="StoreManagementView.jsp?pageNumber=<%=pageNumber + 1%>"
+        <a href="UserGradeHistoryView.jsp?pageNumber=<%=pageNumber + 1%>"
            class="btn btn-success btn-arrow-left">다음</a>
         <%
             //            }

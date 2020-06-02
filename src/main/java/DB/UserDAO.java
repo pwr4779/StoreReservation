@@ -68,6 +68,26 @@ public class UserDAO {
         return list;
     }
 
+    public static  ArrayList<GradeHistory>  GetGradeHistoryList(int pageNumber, String UserNo) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "SELECT * FROM USER_GRADE_HISTORY WHERE ? <= ROWNUM AND ROWNUM < ? AND USER_NO=? ORDER BY GRANT_DATE";
+        ArrayList<GradeHistory> list = new ArrayList<GradeHistory>();
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setInt(1, pageNumber);
+            pstmt.setInt(2, (pageNumber+10));
+            pstmt.setString(3, UserNo);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                GradeHistory gradeHistory = new GradeHistory(rs.getString("USER_NO"),rs.getString("GRANT_DATE"),rs.getString("GRADE"),rs.getString("EXPIRE_DATE"));
+                list.add(gradeHistory);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
 //    public static int UserGradeHistoryInsert(User user) {
 //        Connection conn = DBconnector.getMySQLConnection();
 //        String SQL = "INSERT INTO USER_GRADE_HISTORY VALUES (?,sysdate,'일반',)";
