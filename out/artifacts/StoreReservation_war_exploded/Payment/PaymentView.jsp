@@ -2,21 +2,7 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="DB.*" %><%--
-  Created by IntelliJ IDEA.
-  User: ParkWonRo
-  Date: 2020-05-24
-  Time: 오전 1:54
-  To change this template use File | Settings | File Templates.
---%>
-
-<%--
-  Created by IntelliJ IDEA.
-  User: ParkWonRo
-  Date: 2020-05-24
-  Time: 오후 7:15
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="DB.*" %>
 <%@ page language="java" contentType="text/html; charset=euc-kr"
          pageEncoding="euc-kr" %>
 <!DOCTYPE html>
@@ -55,7 +41,7 @@
             <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
             <li><a href="../PaymentView.jsp">결제처리</a></li>
-            <li><a href=".jsp">회원관리</a></li>
+            <li><a href="../UserManagerment/UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -86,7 +72,7 @@
                 for (int i = 0; i < list.size(); i++) {
                     String orderNo = list.get(i).getOrderNo();
             %>
-            <form method="post" action="BackUpStoreInfo.jsp?OrderNo=<%=orderNo%>&select=<%=i%>">
+            <form method="post" action="PaymentProcessingView.jsp?OrderNo=<%=list.get(i).getOrderNo()%>">
             <tr>
                 <td><%=list.get(i).getStoreNo()%></td>
                 <td><%=list.get(i).getStoreName()%></td>

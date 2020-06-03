@@ -37,7 +37,7 @@ public class UserDAO {
             pstmt.setString(1, user.getUserID());
             pstmt.setInt(2, 1000);
             pstmt.setInt(3, 0);
-            pstmt.setString(4, null);
+            pstmt.setString(4, "N");
             pstmt.setInt(5, 0);
             pstmt.setInt(6, 0);
             pstmt.setInt(7, 0);
@@ -68,7 +68,7 @@ public class UserDAO {
         return list;
     }
 
-    public static  ArrayList<GradeHistory>  GetGradeHistoryList(int pageNumber, String UserNo) {
+    public static ArrayList<GradeHistory>  GetGradeHistoryList(int pageNumber, String UserNo) {
         Connection conn = DBconnector.getMySQLConnection();
         String SQL = "SELECT * FROM USER_GRADE_HISTORY WHERE ? <= ROWNUM AND ROWNUM < ? AND USER_NO=? ORDER BY GRANT_DATE";
         ArrayList<GradeHistory> list = new ArrayList<GradeHistory>();
@@ -88,17 +88,29 @@ public class UserDAO {
         return list;
     }
 
-//    public static int UserGradeHistoryInsert(User user) {
-//        Connection conn = DBconnector.getMySQLConnection();
-//        String SQL = "INSERT INTO USER_GRADE_HISTORY VALUES (?,sysdate,'일반',)";
-//        PreparedStatement pstmt;
-//        try {
-//            pstmt = conn.prepareStatement(SQL);
-//            pstmt.setString(1, user.getUserID());
-//            return pstmt.executeUpdate();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return -1; // DB 오류
-//    }
+    public static  int  UpdateGrade() {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "UPDATE USER_DETAIL SET GRADE = (CASE WHEN NUM_OF_ORDERS>=20 AND YEAR_AC_POINT>=10000 THEN 'G' WHEN NUM_OF_ORDERS>=10 AND YEAR_AC_POINT>5000 THEN 'S' ELSE 'N' END)";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            return pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+
+    public static int UserGradeHistoryInsert() {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "INSERT INTO USER_GRADE_HISTORY(USER_NO,GRANT_DATE,GRADE,EXPIRE_DATE) SELECT USER_NO, SYSDATE, GRADE, ADD_MONTHS(SYSDATE,12) from USER_DETAIL";
+            PreparedStatement pstmt;
+            try {
+                pstmt = conn.prepareStatement(SQL);
+                return pstmt.executeUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
+        }
+        return -1; // DB 오류
+    }
 }

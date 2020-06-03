@@ -123,7 +123,8 @@
         <%
             //            }
         %>
-
+        <a href="UpdateGradeAction.jsp"
+           class="btn btn-success btn-arrow-right">등급갱신</a>
     </div>
 </div>
 

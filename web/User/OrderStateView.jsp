@@ -70,6 +70,15 @@
 <!-- 주문현황 -->
 <%
     ArrayList<OrderState> list = OrderDAO.OrderState(userID);
+    if(list.size()==0){
+%>
+<script>
+    alert("주문된 현황이 없습니다!!")
+    location.href = 'UserManagementView.jsp'
+</script>
+
+<%
+    }else{
 %>
 <div class="container">
     <div class="col-lg-3"></div>
@@ -111,6 +120,7 @@
                     </tr>
                     <%
                         }
+    }
                     %>
                     </tbody>
                 </table>

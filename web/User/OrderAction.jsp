@@ -9,6 +9,7 @@
 <%@ page import = "java.sql.*" %>
 <%@ page import="DB.*" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 
 
 <html>
@@ -28,7 +29,10 @@
     }
     Connection conn = DBconnector.getMySQLConnection();
     ArrayList<Menu> list = MenuDAO.getList(0, conn);
-    String OrderNo = StoreNo+""+UserNo;
+    SimpleDateFormat format = new SimpleDateFormat ( "yyyyMMddHHmmss");
+    String current = format.format (System.currentTimeMillis());
+
+    String OrderNo = StoreNo+UserNo+current;
     int flag = 0;
     for (int i = 0; i < list.size(); i++) {
         String MenuNo = list.get(i).getMenuNo();
@@ -36,15 +40,6 @@
         if ( Integer.parseInt(request.getParameter("count" + i)) > 0) {
             if(flag == 0){
                 int r = OrderDAO.InsertOrder(OrderNo, StoreNo+ "", UserNo + "", 0, Integer.parseInt(request.getParameter("tableNum")), Integer.parseInt(request.getParameter("UserCount")));
-                if(r == -1){
-                    %>
-                    <script>
-                        alert( "이미 주문이 들어있습니다!!")
-                location.href = 'OrderView.jsp'
-                        </script>
-                        <%
-               flag++;
-                }
             }
             OrderDAO.InsertOrderMenu(MenuNo, OrderNo, Integer.parseInt(request.getParameter("count" + i)), MenuAmount);
         }

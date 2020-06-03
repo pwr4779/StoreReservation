@@ -57,7 +57,7 @@ public class OrderDAO {
 
     public static int InsertOrder(String OrderNo,String StoreNo, String UserNo, int totalamount, int tableNo, int Usercount){
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "INSERT INTO ORDERS VALUES(?,?,?,?,?,?)";
+        String SQL = "INSERT INTO ORDERS VALUES(?,?,?,?,?,?,'N')";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, OrderNo);
@@ -75,7 +75,7 @@ public class OrderDAO {
 
     public static int UpdateTotalAmount(String OrderNo, int totalamount){
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "UPDATE ORDERS SET TOTAL_ORDER_AMOUNT=? WHERE ORDER_NO=?";
+        String SQL = "UPDATE ORDERS SET TOTAL_ORDER_AMOUNT=? WHERE ORDER_NO=? AND orders.payment='N'";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, totalamount);
@@ -89,7 +89,7 @@ public class OrderDAO {
 
     public static ArrayList<OrderState> OrderState(String UserID){
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "select * from order_menu left outer join menu on order_menu.menu_no = menu.menu_no left outer join orders on order_menu.order_no = orders.order_no left outer join store on orders.store_no=store.store_no where user_no=?";
+        String SQL = "select * from order_menu left outer join menu on order_menu.menu_no = menu.menu_no left outer join orders on order_menu.order_no = orders.order_no left outer join store on orders.store_no=store.store_no where user_no=? and orders.payment_check='N'";
         ArrayList<OrderState> list = new ArrayList<OrderState>();
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -117,9 +117,39 @@ public class OrderDAO {
         return list;
     }
 
+    public static ArrayList<OrderState> OrderStateDetail(String store_no){
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "select * from order_menu left outer join menu on order_menu.menu_no = menu.menu_no left outer join orders on order_menu.order_no = orders.order_no left outer join store on orders.store_no=store.store_no where store.store_no=? and orders.payment_check='N'";
+        ArrayList<OrderState> list = new ArrayList<OrderState>();
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, store_no);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                String OrderNo = rs.getString("ORDER_NO");
+                String StoreNo = rs.getString("STORE_NO");
+                String STORE_NAME = rs.getString("STORE_NAME");
+                String MenuName = rs.getString("MENU_NAME");
+                String UserNo = rs.getString("USER_NO");
+                int AMOUNT = rs.getInt("AMOUNT");
+                int NUM_OF_ORDERS = rs.getInt("NUM_OF_ORDERS");
+                int ORDER_AMOUNT =  rs.getInt("ORDER_AMOUNT");
+                int TOTAL_ORDER_AMOUNT = rs.getInt("TOTAL_ORDER_AMOUNT");
+                int TABLE_NO = rs.getInt("TABLE_NO");
+                int NUM_OF_USERS = rs.getInt("NUM_OF_USERS");
+                OrderState orderState = new OrderState(OrderNo,StoreNo,STORE_NAME,MenuName ,UserNo,AMOUNT ,NUM_OF_ORDERS,ORDER_AMOUNT,TOTAL_ORDER_AMOUNT ,TABLE_NO, NUM_OF_USERS);
+                list.add(orderState);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     public static ArrayList<OrderState> OrderStateALLList(){
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "select * from order_menu left outer join menu on order_menu.menu_no = menu.menu_no left outer join orders on order_menu.order_no = orders.order_no left outer join store on orders.store_no=store.store_no";
+        String SQL = "select * from order_menu left outer join menu on order_menu.menu_no = menu.menu_no left outer join orders on order_menu.order_no = orders.order_no left outer join store on orders.store_no=store.store_no  where orders.payment_check='N' group by order_no";
 
         ArrayList<OrderState> list = new ArrayList<OrderState>();
         try {
