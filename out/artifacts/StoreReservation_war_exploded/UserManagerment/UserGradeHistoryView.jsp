@@ -63,7 +63,7 @@
         <ul class="nav navbar-nav">
             <li><a href="../StoreManagement/StoreManagementView.jsp">概厘包府</a></li>
             <li><a href="../Menu/MenuManageView.jsp">皋春包府</a></li>
-            <li><a href="../Payment/PaymentView.jsp">搬力贸府</a></li>
+            <li><a href="../Payment/SelectStore.jsp">搬力贸府</a></li>
             <li><a href="UserManagementView.jsp">雀盔包府</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

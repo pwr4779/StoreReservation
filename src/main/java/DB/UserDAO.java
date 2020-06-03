@@ -68,6 +68,23 @@ public class UserDAO {
         return list;
     }
 
+    public static  UserDetail  GetUserDetail(String UserNo) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "SELECT * FROM USER_DETAIL WHERE USER_NO=? ";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, UserNo);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            UserDetail userDetail = new UserDetail(rs.getString("USER_NO"),rs.getInt("AC_POINT"),rs.getInt("NUM_OF_ORDERS"),rs.getString("GRADE"),rs.getInt("COUPON_COUNT_10p"),rs.getInt("COUPON_COUNT_7p"),rs.getInt("COUPON_COUNT_3p"),rs.getInt("YEAR_AC_POINT"));
+            return userDetail;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
     public static ArrayList<GradeHistory>  GetGradeHistoryList(int pageNumber, String UserNo) {
         Connection conn = DBconnector.getMySQLConnection();
         String SQL = "SELECT * FROM USER_GRADE_HISTORY WHERE ? <= ROWNUM AND ROWNUM < ? AND USER_NO=? ORDER BY GRANT_DATE";

@@ -2,7 +2,21 @@
 <%@ page import="java.sql.PreparedStatement" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="DB.*" %>
+<%@ page import="DB.*" %><%--
+  Created by IntelliJ IDEA.
+  User: ParkWonRo
+  Date: 2020-05-24
+  Time: 오전 1:54
+  To change this template use File | Settings | File Templates.
+--%>
+
+<%--
+  Created by IntelliJ IDEA.
+  User: ParkWonRo
+  Date: 2020-05-24
+  Time: 오후 7:15
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=euc-kr"
          pageEncoding="euc-kr" %>
 <!DOCTYPE html>
@@ -13,7 +27,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <!-- 스타일시트 참조  -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>레스토랑 웹사이트</title>
+    <title>주문하기</title>
 </head>
 <body>
 
@@ -22,11 +36,10 @@
     if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-
-    String StoreNo = null; //매장번호
+    int pageNumber = 1; //기본 페이지 넘버
     //페이지넘버값이 있을때
-    if (request.getParameter("StoreNo") != null) {
-        StoreNo = request.getParameter("StoreNo");
+    if (request.getParameter("pageNumber") != null) {
+        pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
     }
 %>
 
@@ -40,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -54,46 +67,59 @@
         </ul>
     </div>
 </nav>
-<!-- 주문현황 -->
+<!-- 매장선택 -->
 <div class="container">
     <div class="row">
+        <h3 style="text-align: center;">결제처리(매장을 선택해주세요.)</h3>
         <table class="table table-striped"
                style="text-align: center; border: 1px solid #dddddd">
             <thead>
             <tr>
                 <th style="background-color: #eeeeee; text-align: center;">매장번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">주문번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">회원번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">테이블번호</th>
-                <th style="background-color: #eeeeee; text-align: center;">이용자수</th>
-                <th style="background-color: #eeeeee; text-align: center;">총가격</th>
-                <th style="background-color: #eeeeee; text-align: center;">결제처리</th>
+                <th style="background-color: #eeeeee; text-align: center;">주소</th>
+                <th style="background-color: #eeeeee; text-align: center;">전화번호</th>
+                <th style="background-color: #eeeeee; text-align: center;">테이블수</th>
+                <th style="background-color: #eeeeee; text-align: center;">오픈시간</th>
+                <th style="background-color: #eeeeee; text-align: center;">마감시간</th>
+                <th style="background-color: #eeeeee; text-align: center;">매장명(선택)</th>
             </tr>
             </thead>
             <tbody>
             <%
                 StoreDAO storeDAO = new StoreDAO();
                 Connection conn = DBconnector.getMySQLConnection();
-                ArrayList<Order> list = OrderDAO.getList(Integer.parseInt(StoreNo));
+                ArrayList<Store> list = storeDAO.getList(pageNumber, conn);
                 for (int i = 0; i < list.size(); i++) {
-                    String orderNo = list.get(i).getOrderNo();
             %>
-            <form method="post" action="PaymentProcessingView.jsp?OrderNo=<%=orderNo%>">
             <tr>
                 <td><%=list.get(i).getStoreNo()%></td>
-                <td><%=list.get(i).getOrderNo()%></td>
-                <td><%=list.get(i).getUserNo()%></td>
-                <td><%=list.get(i).getTableNo()%></td>
-                <td><%=list.get(i).getNumOfUsers()%></td>
-                <td><%=list.get(i).getTotalAmount()%></td>
-                <td><input type="submit" class="btn btn-primary form-control" value="결제하기"></td>
+                <td><%=list.get(i).getStoreAddr()%></td>
+                <td><%=list.get(i).getStorePhone()%></td>
+                <td><%=list.get(i).getStoreTable()%></td>
+                <td><%=list.get(i).getStoreOpen().substring(11,13)+" : "+list.get(i).getStoreOpen().substring(14,16)%></td>
+                <td><%=list.get(i).getStoreClose().substring(11,13)+" : "+list.get(i).getStoreClose().substring(14,16)%></td>
+                <td><a href="PaymentView.jsp?StoreNo=<%=list.get(i).getStoreNo()%>"><%=list.get(i).getStoreName()%></a></td>
             </tr>
-            </form>
             <%
                 }
             %>
             </tbody>
         </table>
+        <!-- 페이지 넘기기 -->
+        <%
+            if (pageNumber != 1) {
+        %>
+        <a href="OrderView.jsp?pageNumber=<%=pageNumber - 1%>"
+           class="btn btn-success btn-arrow-left">이전</a>
+        <%
+            }
+//            if (bbsDAO.nextPage(pageNumber)) {
+        %>
+        <a href="OrderView.jsp?pageNumber=<%=pageNumber + 1%>"
+           class="btn btn-success btn-arrow-left">다음</a>
+        <%
+            //            }
+        %>
     </div>
 </div>
 

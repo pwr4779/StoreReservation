@@ -62,8 +62,9 @@
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="StoreManagementView.jsp">매장관리</a></li>
-            <li><a href="bbs.jsp">메뉴관리</a></li>
-            <li><a href="bbs.jsp">회원관리</a></li>
+            <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
+            <li><a href="../Payment/SelectStore.jsp">결제처리</a></li>
+            <li><a href="../UserManagerment/UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
