@@ -9,7 +9,7 @@ public class StoreDAO {
 
     public static int insertStore(Store store) {
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "INSERT INTO STORE VALUES(?,?,?,?,?,to_timestamp(?,'HH24MI'),to_timestamp(?,'HH24MI'))";
+        String SQL = "INSERT INTO STORE VALUES(?,?,?,?,?,to_timestamp(?,'HH24:MI'),to_timestamp(?,'HH24:MI'))";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, store.getStoreNo());

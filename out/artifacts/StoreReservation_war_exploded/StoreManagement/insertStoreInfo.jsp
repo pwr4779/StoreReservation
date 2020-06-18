@@ -28,14 +28,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">레스토랑 예약 시스템</a>
+        <a class="navbar-brand">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
-            <li><a href="../Payment/SelectStore.jsp">결제처리</a></li>
-            <li><a href="../UserManagerment/UserManagementView.jsp">회원관리</a></li>
+            <li><a href="../Payment/PaymentSelectStore.jsp">주문현황 및 결제처리</a></li>
+            <li><a href="../Payment/PaymentStateView.jsp">결제처리현황</a></li>
+            <li><a href="../ReservationManagement/ReservationManagementView.jsp">예약관리</a></li>
+            <li><a href="../UserManagement/UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -51,7 +53,7 @@
                 <h3 style="text-align: center;">매장 추가</h3>
                 <small style="text-align: center;">*필수 항목을 모두 입력해주세요.</small>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*매장번호" name="storeNo" maxlength="20">
+                    <input type="number" class="form-control" placeholder="*매장번호" name="storeNo" maxlength="20" min="0">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="*주소" name="addr" maxlength="20">
@@ -60,13 +62,13 @@
                     <input type="text" class="form-control" placeholder="*전화번호" name="phone" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*테이블수" name="table" maxlength="20">
+                    <input type="number" class="form-control" placeholder="*테이블수" name="table" maxlength="20" min="0">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*오픈시간" name="openTime" maxlength="20">
+                    <input type="time" class="form-control" placeholder="*오픈시간" name="openTime" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*마감시간" name="closeTime" maxlength="20">
+                    <input type="time" class="form-control" placeholder="*마감시간" name="closeTime" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="*매장명" name="storeName" maxlength="50">

@@ -42,7 +42,7 @@
     if (StoreNo == 0) {%>
 <script>
     alert( "유효하지 않은 매장입니다!!")
-    location.href='StoreManagementView.jsp'
+    location.href='UserHomeView.jsp'
 </script>
 <%}
     Store store = new StoreDAO().getStore(StoreNo);
@@ -58,14 +58,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="UserHomeView.jsp">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="UserHomeView.jsp">내정보</a></li>
             <li><a href="OrderView.jsp">주문하기</a></li>
             <li><a href="OrderStateView.jsp">주문현황</a></li>
-            <li><a href=".jsp">예약하기</a></li>
+            <li><a href="../Reservation/SelectStore.jsp">예약하기</a></li>
+            <li><a href="../Reservation/ReservationStateView.jsp">예약현황</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>

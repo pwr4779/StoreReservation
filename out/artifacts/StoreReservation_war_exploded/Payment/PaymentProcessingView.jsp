@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <!-- 스타일시트 참조  -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>주문현황확인</title>
+    <title>주문현황확인 및 결제처리</title>
 </head>
 <body>
 
@@ -38,14 +38,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
-            <li><a href="../SelectStore.jsp">결제처리</a></li>
-            <li><a href="../UserManagerment/UserManagementView.jsp">회원관리</a></li>
+            <li><a href="./PaymentSelectStore.jsp">주문현황 및 결제처리</a></li>
+            <li><a href="./PaymentStateView.jsp">결제처리현황</a></li>
+            <li><a href="../ReservationManagement/ReservationManagementView.jsp">예약관리</a></li>
+            <li><a href="../UserManagement/UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -101,7 +103,7 @@
     </div>
     <div class="col-lg-6">
         <div class="jumbotron" style="padding-top: 20px;">
-            <form method="post" action="signUpAction.jsp">
+            <form method="post" action="NormalPayAction.jsp?OrderNo=<%=OrderNo%>">
 
                     <h3 style="text-align: center;">일반결제</h3>
                      <small>주문결제시 1000포인트 적립</small>
@@ -112,18 +114,19 @@
                         <input type="text" class="form-control" placeholder="사용포인트" name="UsingPoint" maxlength="20">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
+                        <input type="text" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
                     </div>
                     <input type="submit" class="btn btn-primary form-control" value="결제">
                 </form>
-            <form method="post" action="signUpAction.jsp">
+            <form method="post" action="CardSaleAction.jsp?OrderNo=<%=OrderNo%>">
                 <h3 style="text-align: center;">제휴할인결제</h3>
                 <small>주문결제시 1000포인트 적립</small>
+                <small>통신사할인 5% 할인 적용</small>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="카드사" name="CardCom" maxlength="20">
+                    <input type="text" class="form-control" placeholder="*카드사" name="CardCom" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="카드번호" name="CardNo" maxlength="20">
+                    <input type="text" class="form-control" placeholder="*카드번호" name="CardNo" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="쿠폰사용(10,7,3 중 입력)" name="SaleCoupon" maxlength="20">
@@ -132,18 +135,19 @@
                     <input type="text" class="form-control" placeholder="사용포인트" name="UsingPoint" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
+                    <input type="text" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
                 </div>
                 <input type="submit" class="btn btn-primary form-control" value="제휴카드 할인적용 결제">
             </form>
-            <form method="post" action="signUpAction.jsp">
+            <form method="post" action="PhoneSaleAction.jsp?OrderNo=<%=OrderNo%>">
                 <h3 style="text-align: center;">통신사할인 결제</h3>
                 <small>주문결제시 1000포인트 적립</small>
+                <small>통신사할인 5% 할인 적용</small>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="통신사" name="PhoneCom" maxlength="20">
+                    <input type="text" class="form-control" placeholder="*통신사" name="PhoneCom" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="전화번호" name="Phone" maxlengt="20">
+                    <input type="text" class="form-control" placeholder="*전화번호" name="Phone" maxlengt="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="쿠폰사용(10,7,3 중 입력)" name="SaleCoupon" maxlength="20">
@@ -152,9 +156,9 @@
                     <input type="text" class="form-control" placeholder="사용포인트" name="UsingPoint" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
+                    <input type="text" class="form-control" placeholder="할부(최대 6개월)" name="InstallMonth" maxlength="20">
                 </div>
-                <input type="submit" class="btn btn-primary form-control" value="제휴카드 할인적용 결제">
+                <input type="submit" class="btn btn-primary form-control" value="제휴통신사 할인적용 결제">
             </form>
 
         </div>

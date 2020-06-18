@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class UserDAO {
     public static int SignUp(User user, Connection conn) {
-        String SQL = "INSERT INTO USERS VALUES (?,?,?,?,?,?,TO_DATE(?,'YYYYMMDD'),?,?,?)";
+        String SQL = "INSERT INTO USERS VALUES (?,?,?,?,?,?,TO_DATE(?,'YYYY-MM-DD'),?,?,?)";
         PreparedStatement pstmt;
         try {
             pstmt = conn.prepareStatement(SQL);
@@ -20,7 +20,7 @@ public class UserDAO {
             pstmt.setString(7, user.getUserBirth());
             pstmt.setString(8, user.getUserHobby());
             pstmt.setString(9, user.getUserPreferenceStore());
-            pstmt.setString(10, user.getUserSanctonDate());
+            pstmt.setString(10, user.getSanctionsDate());
 
             return pstmt.executeUpdate();
         } catch (Exception e) {
@@ -129,5 +129,21 @@ public class UserDAO {
                 e.printStackTrace();
         }
         return -1; // DB 오류
+    }
+
+    public static  User  getUserInfo(String UserNo) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "SELECT * FROM USERS WHERE USER_NO=? ";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, UserNo);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            User user = new User(rs.getString("USER_NAME"),rs.getString("ID"),rs.getString("PASSWORD"),rs.getString("ADDR"),rs.getString("PHONE"),rs.getString("BIRTH"),rs.getString("HOBBY"),rs.getString("PR_ST_NAME"),rs.getString("RE_SA_DATE"));
+            return user;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

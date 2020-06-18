@@ -1,4 +1,6 @@
-<%--
+<%@ page import="DB.UserDAO" %>
+<%@ page import="DB.UserDetail" %>
+<%@ page import="DB.User" %><%--
   Created by IntelliJ IDEA.
   User: ParkWonRo
   Date: 2020-05-24
@@ -35,58 +37,45 @@
                 <li><a href="UserHomeView.jsp">내정보</a></li>
                 <li><a href="OrderView.jsp">주문하기</a></li>
                 <li><a href="OrderStateView.jsp">주문현황</a></li>
-                <li><a href=".jsp">예약하기</a></li>
+                <li><a href="../Reservation/SelectStore.jsp">예약하기</a></li>
+                <li><a href="../Reservation/ReservationStateView.jsp">예약현황</a></li>
             </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
         </ul>
     </div>
 </nav>
-
+<%
+    String userID = null;
+    if (session.getAttribute("userID") != null) {
+        userID = (String) session.getAttribute("userID");
+    }
+    UserDetail userdetail = UserDAO.GetUserDetail(userID);
+    User userinfo = UserDAO.getUserInfo(userID);
+    String s_date = userinfo.getSanctionsDate();
+    if(s_date==null){
+        s_date = "";
+    }
+%>
 <!-- 내정보 -->
 <div class="container">
-    <div class="row">
-        <table class="table table-striped"
-               style="text-align: center; border: 1px solid #dddddd">
-            <thead>
-            <tr>
-                <th colspan="3"
-                    style="background-color: #eeeeee; text-align: center;">내 정보 </th>
-            </tr>
-            </thead>
-            <%--<tbody>--%>
-            <%--<tr>--%>
-                <%--<td style="width: 20%;"> 매장번호 </td>--%>
-                <%--<td colspan="2"><%=  %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>매장명</td>--%>
-                <%--<td colspan="2"><%=  %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>주소</td>--%>
-                <%--<td colspan="2"><%=  %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>전화번호</td>--%>
-                <%--<td colspan="2"><%= %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>테이블수</td>--%>
-                <%--<td colspan="2"><%=  %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>오픈시간</td>--%>
-                <%--<td colspan="2"><%= %></td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-                <%--<td>마감시간</td>--%>
-                <%--<td colspan="2"><%= %></td>--%>
-            <%--</tr>--%>
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="jumbotron" style="padding-top: 20px;">
+            <h3 style="text-align: center;">내정보</h3>
 
-            <%--</tbody>--%>
-        </table>
-
+            <h4 style="text-align: center;">고객번호: <%=userdetail.getUserNo()%></h4>
+            <h4 style="text-align: center;">현재포인트: <%=userdetail.getACPoint()%> </h4>
+            <h4 style="text-align: center;">총누적포인트: <%=userdetail.getYearACPoint()%> </h4>
+            <h4 style="text-align: center;">3%할인쿠폰수: <%=userdetail.getCoupon3()%> </h4>
+            <h4 style="text-align: center;">7%할인쿠폰수: <%=userdetail.getCoupon7()%> </h4>
+            <h4 style="text-align: center;">10%할인쿠폰수: <%=userdetail.getCoupon10()%> </h4>
+            <h4 style="text-align: center;">등급: <%=userdetail.getGrade()%> </h4>
+            <h4 style="text-align: center;">주문수: <%=userdetail.getNumOfOrders()%> </h4>
+            <h4 style="text-align: center;">예약제재기간: ~ <%=s_date%></h4>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

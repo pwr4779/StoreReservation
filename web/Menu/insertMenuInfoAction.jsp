@@ -41,27 +41,23 @@
     if(result == -1){
 %>
 <script>
-    alert( "매장 추가 실패!!.")
+    alert( "메뉴 추가 실패!!.")
     location.href = 'MenuManageView.jsp'
 </script>
 <%
 }else{
 %>
 <script>
-    alert( "매장 추가 완료!!")
+    alert( "메뉴 추가 완료!!")
     location.href = 'MenuManageView.jsp'
 </script>
 <%
         }
     }
 %>
-
 <!-- 애니매이션 담당 JQUERY -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- 부트스트랩 JS  -->
 <script src="../js/bootstrap.js"></script>
-
-
-
 </body>
 </html>

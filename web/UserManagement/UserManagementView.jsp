@@ -53,13 +53,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="../StoreManagement/StoreManagementView.jsp">매장관리</a></li>
             <li><a href="../Menu/MenuManageView.jsp">메뉴관리</a></li>
-            <li><a href="../Payment/SelectStore.jsp">결제처리</a></li>
+            <li><a href="../Payment/PaymentSelectStore.jsp">주문현황 및 결제처리</a></li>
+            <li><a href="../Payment/PaymentStateView.jsp">결제처리현황</a></li>
+            <li><a href="../ReservationManagement/ReservationManagementView.jsp">예약관리</a></li>
             <li><a href="UserManagementView.jsp">회원관리</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

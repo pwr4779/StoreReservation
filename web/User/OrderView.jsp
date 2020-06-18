@@ -53,14 +53,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="UserHomeView.jsp">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="UserHomeView.jsp">내정보</a></li>
             <li><a href="OrderView.jsp">주문하기</a></li>
             <li><a href="OrderStateView.jsp">주문현황</a></li>
-            <li><a href=".jsp">예약하기</a></li>
+            <li><a href="../Reservation/SelectStore.jsp">예약하기</a></li>
+            <li><a href="../Reservation/ReservationStateView.jsp">예약현황</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -70,7 +71,7 @@
 <!-- 매장선택 -->
 <div class="container">
     <div class="row">
-        <h3 style="text-align: center;">매장을 선택해주세요.</h3>
+        <h3 style="text-align: center;">주문할 매장을 선택해주세요.</h3>
         <table class="table table-striped"
                style="text-align: center; border: 1px solid #dddddd">
             <thead>
@@ -113,13 +114,10 @@
            class="btn btn-success btn-arrow-left">이전</a>
         <%
             }
-//            if (bbsDAO.nextPage(pageNumber)) {
         %>
         <a href="OrderView.jsp?pageNumber=<%=pageNumber + 1%>"
            class="btn btn-success btn-arrow-left">다음</a>
-        <%
-            //            }
-        %>
+
     </div>
 </div>
 

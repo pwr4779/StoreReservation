@@ -36,11 +36,6 @@
     if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    int pageNumber = 1; //기본 페이지 넘버
-    //페이지넘버값이 있을때
-    if (request.getParameter("pageNumber") != null) {
-        pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-    }
 %>
 
 <!-- 네비게이션  -->
@@ -53,14 +48,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../StoreManagement/StoreManagementView.jsp">레스토랑 예약 시스템</a>
+        <a class="navbar-brand" href="UserHomeView.jsp">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="UserHomeView.jsp">내정보</a></li>
             <li><a href="OrderView.jsp">주문하기</a></li>
             <li><a href="OrderStateView.jsp">주문현황</a></li>
-            <li><a href=".jsp">예약하기</a></li>
+            <li><a href="../Reservation/SelectStore.jsp">예약하기</a></li>
+            <li><a href="../Reservation/ReservationStateView.jsp">예약현황</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="../loginView.jsp">로그아웃</a></li>
@@ -74,7 +70,7 @@
 %>
 <script>
     alert("주문된 현황이 없습니다!!")
-    location.href = 'UserManagementView.jsp'
+    location.href = 'UserHomeView.jsp'
 </script>
 
 <%
@@ -109,7 +105,6 @@
                     </thead>
                     <tbody>
                     <%
-
                         for (int i = 0; i < list.size(); i++) {
                     %>
                     <tr>
@@ -124,6 +119,7 @@
                     %>
                     </tbody>
                 </table>
+                <a href="DeleteOrderAction.jsp" class="btn btn-primary form-control" >주문취소</a>
         </div>
     </div>
 </div>

@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand">레스토랑 예약 시스템</a>
+        <a class="navbar-brand">레스토랑 주문 & 예약 시스템</a>
     </div>
     <div class="collapse navbar-collapse" id="#bs-example-navbar-collapse-1">
 
@@ -62,7 +62,7 @@
                     <input type="text" class="form-control" placeholder="*휴대폰번호" name="userPhone" maxlength="20">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="*생일(YYYYMMDD ex)19960101)" name="userBirth" maxlength="20">
+                    <input type="date" class="form-control" placeholder="*생일" name="userBirth" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="취미" name="userHobby" maxlength="50">

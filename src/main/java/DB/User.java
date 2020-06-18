@@ -14,7 +14,7 @@ public class User {
     String UserBirth;
     String UserHobby;
     String UserPreferenceStore;
-    String UserSanctonDate;
+    String sanctionsDate;
 
 
 }

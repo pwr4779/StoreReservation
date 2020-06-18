@@ -33,6 +33,8 @@
     String current = format.format (System.currentTimeMillis());
 
     String OrderNo = StoreNo+UserNo+current;
+    int count = OrderDAO.checkOrder(UserNo);
+    if(count==0){
     int flag = 0;
     for (int i = 0; i < list.size(); i++) {
         String MenuNo = list.get(i).getMenuNo();
@@ -53,19 +55,26 @@
 %>
 <script>
     alert( "주문 성공!!")
-    location.href = 'OrderView.jsp'
+    location.href = 'OrderStateView.jsp'
 </script>
 <%
     }else{
 %>
 <script>
-    alert( "주문 실패!!")
+        alert( "주문 실패!!")
+    location.href = 'OrderView.jsp'
+            </script>
+<%
+    }
+}else{
+%>
+<script>
+    alert( "이미 주문이 들어가 있습니다!!")
     location.href = 'OrderView.jsp'
 </script>
 <%
-    }
-%>
-
+}
+    %>
 </body>
 </html>
 

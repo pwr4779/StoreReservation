@@ -25,7 +25,7 @@
     String userPhone = DBconnector.NullCheck(request.getParameter("userPhone"));
     String userBirth = DBconnector.NullCheck(request.getParameter("userBirth"));
     String userHobby = DBconnector.NullCheck(request.getParameter("userHobby"));
-    String userPreferenceStore = DBconnector.NullCheck(request.getParameter("userPreferenceStore"));
+    String userPreferenceStore = DBconnector.NullCheck(new String(request.getParameter("userPreferenceStore").getBytes("8859_1"), "EUC-KR"));
     User user = new User(userName, userID, userPassword, userAddr, userPhone, userBirth, userHobby, userPreferenceStore, null);
     Connection conn = DBconnector.getMySQLConnection();
     if (user.getUserID() == null || user.getUserPassword() == null || user.getUserName() == null

@@ -9,14 +9,15 @@ public class OrderDAO {
 
     public static ArrayList<Order> getList(int StoreNo) {
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "SELECT * FROM ORDERS WHERE STORE_NO = ?";
+        String SQL = "SELECT * FROM ORDERS WHERE STORE_NO = ? AND PAYMENT_CHECK = 'N'";
         ArrayList<Order> list = new ArrayList<Order>();
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, Integer.toString(StoreNo));
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                Order order = new Order(rs.getString("ORDER_NO"), rs.getString("STORE_NO"), rs.getString("USER_NO"), rs.getInt("TOTAL_ORDER_AMOUNT"), rs.getInt("TABLE_NO"), rs.getInt("NUM_OF_USERS"));        list.add(order);
+                Order order = new Order(rs.getString("ORDER_NO"), rs.getString("STORE_NO"), rs.getString("USER_NO"), rs.getInt("TOTAL_ORDER_AMOUNT"), rs.getInt("TABLE_NO"), rs.getInt("NUM_OF_USERS"));
+                list.add(order);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -75,7 +76,7 @@ public class OrderDAO {
 
     public static int UpdateTotalAmount(String OrderNo, int totalamount){
         Connection conn = DBconnector.getMySQLConnection();
-        String SQL = "UPDATE ORDERS SET TOTAL_ORDER_AMOUNT=? WHERE ORDER_NO=? AND orders.payment='N'";
+        String SQL = "UPDATE ORDERS SET TOTAL_ORDER_AMOUNT=? WHERE ORDER_NO=? AND payment_check='N'";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, totalamount);
@@ -146,4 +147,34 @@ public class OrderDAO {
         }
         return list;
     }
+
+
+    public static int checkOrder(String userNo) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "SELECT COUNT(*) COUNT FROM ORDERS WHERE USER_NO=? AND PAYMENT_CHECK='N'";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, userNo);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+
+            return rs.getInt("COUNT");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+    public static int deleteOrder(String userNo) {
+        Connection conn = DBconnector.getMySQLConnection();
+        String SQL = "DELETE FROM ORDERS WHERE USER_NO=? AND PAYMENT_CHECK='N'";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, userNo);
+            return pstmt.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
 }
