@@ -1,6 +1,6 @@
 StoreReservation
 
-### language: java, JSP
+language: java, JSP
 
 레스토랑 예약 시스템을 관리하는 관리자, 사용자 계정을 구분하여 사용할 기능을 구분.  
 
@@ -19,5 +19,5 @@ StoreReservation
 
 DTO, DAO를 만들어서 구현.
 
-## Table List
-![Table](./images/table.png)
+### Table List
+![Table](./images/table.PNG)
