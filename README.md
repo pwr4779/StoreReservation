@@ -2,6 +2,8 @@ StoreReservation
 
 language: java, JSP
 
+youtube: https://www.youtube.com/watch?v=DWc2dot-AgU
+
 레스토랑 예약 시스템을 관리하는 관리자, 사용자 계정을 구분하여 사용할 기능을 구분.  
 
 - 관리자  
